@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'KarmaFuture';
+    src: url('./static/fonts/Karma\ Future.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #018281;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    margin-top: 0.6em;
+}
+
+.header {
+    font-family: KarmaFuture;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.skeleton-dance {
+    width: 18em;
+    margin-bottom: 8em;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: scroll;
+}
+
+.left-content {
+    margin: 0.5em;
+    width: 22em;
+    border: 1px solid #35356b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#time-cell {
+    padding: 0.6em;
+    border-bottom: 0;
+}
+
+.sidebar {
+    width: 300px;
+    margin: 0.5em;
+    /* margin: 0 auto; */
+}
+
+.sidebar-cell-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* .sidebar-cell-link:hover {
+    text-decoration: none;
+} */
+
+.sidebar-cell {
+    background-color: white;
+    border: 1px solid #35356b;
+    width: 16em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.time-cell {
+    margin-bottom: 10px;
+}
+
+.sidebar-cell-link .sidebar-cell {
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.sidebar-cell-link:hover .sidebar-cell {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+    /* border-color: #5f60b9; */
+}
+
+.cell-header {
+    background-color: #7878cf;
+    background: linear-gradient(to bottom, #5d5db9, #35356b);
+    padding: 4px 8px;
+    border-bottom: 1px solid #8888bb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cell-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.status-indicator {
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* .cell-title:hover {
+    text-decoration: underline;
+} */
+
+.cell-timestamp {
+    font-size: 9px;
+    color: white;
+    font-family: Verdana, sans-serif;
+    white-space: nowrap;
+}
+
+.cell-content {
+    padding: 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #0000cc;
+}
+
+.cell-content ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.cell-content li {
+    margin-bottom: 3px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+.dot-online {
+    background: #2ef038;
+}
+.dot-offline {
+    background: #f44336;
+}
+
+@media only screen and (max-width: 605px) {
+  .main-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .left-content {
+    width: 90%;
+    height: 24em;
+  }
+  .sidebar {
+    width: 90%;
+    height: auto;
+  }
+
+  .sidebar-cell {
+    width: 100%;
+  }
+}
