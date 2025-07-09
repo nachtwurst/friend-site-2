@@ -12,6 +12,8 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
+    margin-top: 4em;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -92,7 +94,7 @@ h1 {
 }
 
 .sidebar-cell-link:hover .sidebar-cell {
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
     /* border-color: #5f60b9; */
 }
@@ -158,32 +160,39 @@ h1 {
     margin-left: 0.5em;
     vertical-align: middle;
 }
+
 .dot-online {
     background: #2ef038;
 }
+
 .dot-offline {
     background: #f44336;
 }
 
 @media only screen and (max-width: 605px) {
-  .main-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: scroll;
-  }
+    body {
+        margin-top: 0;
+    }
 
-  .left-content {
-    width: 90%;
-    height: 24em;
-  }
-  .sidebar {
-    width: 90%;
-    height: auto;
-  }
+    .main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: scroll;
+    }
 
-  .sidebar-cell {
-    width: 100%;
-  }
+    .left-content {
+        width: 90%;
+        height: 24em;
+    }
+
+    .sidebar {
+        width: 90%;
+        height: auto;
+    }
+
+    .sidebar-cell {
+        width: 100%;
+    }
 }
