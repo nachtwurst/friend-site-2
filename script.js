@@ -47,8 +47,17 @@ async function checkService(url, timeoutMs = 4000) {
 }
 
 // Update timestamp immediately and then every minute
-updateTimestamp();
-setInterval(updateTimestamp, 60000);
+function startTimestampUpdater() {
+    updateTimestamp();
+    const now = new Date();
+    const msToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+    setTimeout(() => {
+        updateTimestamp();
+        setInterval(updateTimestamp, 60000);
+    }, msToNextMinute);
+}
+
+startTimestampUpdater();
 
 const serviceElements = document.querySelectorAll('.status-indicator');
 
