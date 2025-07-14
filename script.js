@@ -1,4 +1,4 @@
-const serviceUrls = ['https://jf.runez.lol', 'https://get.runez.lol', 'https://books.runez.lol', 'https://games.runez.lol', 'https://cloud.runez.lol', 'https://nachtwurst.github.io/toys/'];
+const serviceUrls = ['https://jf.runez.lol', 'https://get.runez.lol', 'https://books.runez.lol', 'https://games.runez.lol', 'https://cloud.runez.lol', 'https://nachtwurst.github.io/toys/', 'https://wiki.runez.lol'];
 
 function updateTimestamp() {
     const now = new Date();
